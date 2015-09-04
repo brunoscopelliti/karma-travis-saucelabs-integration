@@ -1,0 +1,40 @@
+{
+  "name": "karma-travis-saucelabs-integration",
+  "version": "0.0.1",
+  "description": "CI integrating karma/travis/saucelabs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunoscopelliti/karma-travis-saucelabs-integration.git"
+  },
+  "keywords": [
+    "tests",
+    "karma",
+    "travis",
+    "saucelabs",
+    "continuous",
+    "integration",
+    "ci"
+  ],
+  "author": "Bruno Scopelliti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunoscopelliti/karma-travis-saucelabs-integration/issues"
+  },
+  "homepage": "https://github.com/brunoscopelliti/karma-travis-saucelabs-integration",
+  "dependencies": {
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-ie-launcher": "^0.2.0",
+    "karma-qunit": "^0.1.5",
+    "karma-safari-launcher": "^0.1.1",
+    "karma-sauce-launcher": "^0.2.14",
+    "qunit": "^0.7.6",
+    "qunitjs": "^1.19.0",
+    "sinon": "^1.16.1"
+  }
+}
