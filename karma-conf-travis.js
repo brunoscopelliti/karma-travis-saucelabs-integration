@@ -78,7 +78,7 @@ module.exports = function(config) {
 
 
         sauceLabs: {
-            testName: 'Karma and Sauce Labs demo'
+            testName: 'Karma and Saucelabs demo'
         },
 
         captureTimeout: 120000,
