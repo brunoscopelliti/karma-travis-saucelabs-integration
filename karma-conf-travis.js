@@ -1,4 +1,10 @@
+
+const path = require('path');
+
 module.exports = function(config) {
+
+    const sourceDir = path.join(__dirname, 'src');
+    const testDir = path.join(__dirname, 'test');
 
     // Use ENV vars on Travis and sauce.json locally to get credentials
     // https://docs.saucelabs.com/ci-integrations/travis-ci/
@@ -44,9 +50,37 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'src/*.js',
-            'test/*.js'
+            'test/index.js'
         ],
+
+
+        // webpack configuration
+        webpack: {
+            module: {
+                rules: [{
+                    test: /\.js$/,
+                    include:[
+                        sourceDir,
+                        testDir
+                    ],
+                    loader: 'babel-loader'
+                }]
+            },
+            resolve: {
+                modules: [
+                    'src',
+                    'node_modules'
+                ]
+            },
+        },
+
+
+        // source files, that you wanna generate coverage for
+        // do not include tests or libraries
+        // (these files will be instrumented by Istanbul)
+        preprocessors: {
+            'test/index.js': ['webpack'],
+        },
 
 
         // test results reporter to use

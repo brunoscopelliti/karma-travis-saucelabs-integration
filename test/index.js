@@ -1,11 +1,11 @@
 
-QUnit.test("Zero is invariant value for sum", function(assert) {
+import sum from 'sum.js'
 
-    var a = 0;
-    var b = 10;
+QUnit.test('Zero is invariant value for sum', function(assert) {
 
-    var res = sum(a, b);
+    const a = 0;
+    const b = 10;
 
-    assert.equal(res, 10, "Adding zero does not change the value");
+    assert.equal(sum(a, b), 10, 'Adding zero does not change the value');
 
 });
